@@ -8,9 +8,6 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <div>
-        <Button />
-    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
