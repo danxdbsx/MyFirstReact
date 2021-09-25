@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/MyFirstReact/static/css/main.4c8233e9.chunk.css",
-    "main.js": "/MyFirstReact/static/js/main.ea0f6056.chunk.js",
-    "main.js.map": "/MyFirstReact/static/js/main.ea0f6056.chunk.js.map",
+    "main.css": "/MyFirstReact/static/css/main.6e18a42e.chunk.css",
+    "main.js": "/MyFirstReact/static/js/main.2fd08b48.chunk.js",
+    "main.js.map": "/MyFirstReact/static/js/main.2fd08b48.chunk.js.map",
     "runtime-main.js": "/MyFirstReact/static/js/runtime-main.36e509fe.js",
     "runtime-main.js.map": "/MyFirstReact/static/js/runtime-main.36e509fe.js.map",
     "static/js/2.49f1506e.chunk.js": "/MyFirstReact/static/js/2.49f1506e.chunk.js",
@@ -10,14 +10,15 @@
     "static/js/3.0901359d.chunk.js": "/MyFirstReact/static/js/3.0901359d.chunk.js",
     "static/js/3.0901359d.chunk.js.map": "/MyFirstReact/static/js/3.0901359d.chunk.js.map",
     "index.html": "/MyFirstReact/index.html",
-    "static/css/main.4c8233e9.chunk.css.map": "/MyFirstReact/static/css/main.4c8233e9.chunk.css.map",
+    "static/css/main.6e18a42e.chunk.css.map": "/MyFirstReact/static/css/main.6e18a42e.chunk.css.map",
     "static/js/2.49f1506e.chunk.js.LICENSE.txt": "/MyFirstReact/static/js/2.49f1506e.chunk.js.LICENSE.txt",
-    "static/media/w_2313.2f389e18.png": "/MyFirstReact/static/media/w_2313.2f389e18.png"
+    "static/media/App.css": "/MyFirstReact/static/media/BG1.abedb9b3.png",
+    "static/media/w_2313.797fe698.png": "/MyFirstReact/static/media/w_2313.797fe698.png"
   },
   "entrypoints": [
     "static/js/runtime-main.36e509fe.js",
     "static/js/2.49f1506e.chunk.js",
-    "static/css/main.4c8233e9.chunk.css",
-    "static/js/main.ea0f6056.chunk.js"
+    "static/css/main.6e18a42e.chunk.css",
+    "static/js/main.2fd08b48.chunk.js"
   ]
 }
