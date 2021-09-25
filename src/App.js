@@ -1,5 +1,6 @@
 import logo from './w_2313.png';
 import './App.css';
+import Button from './js/Button';
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload. gusto ko na mag-genshin.
         </p>
+        <div>
+            <Button />
+        </div>
         <a
           className="App-link"
           href="https://reactjs.org"
