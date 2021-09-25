@@ -1,5 +1,4 @@
 import logo from './w_2313.png';
-import logo2 from './logo.svg';
 import './App.css';
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <img src={logo2} />
         <p>
           Edit <code>src/App.js</code> and save to reload. gusto ko na mag-genshin.
         </p>
