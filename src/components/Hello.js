@@ -5,19 +5,19 @@ const Hello = () =>{
 
     // hooks ni react para magamit ni fx yung state concepts
     // param is variable, method, initial value is empty
-    const [hello, setHello] = useState([])
+    const [helloReturn, setHello] = useState([])
 
     // hook again
-    useEffect( () => {
+    useEffect(() => {
         helloService.getHello()
         .then(
             response => {
                 setHello(response.data);
             }
-        )
+        ) 
     })
 
-    return hello;
+    return helloReturn;
 }
 
 export default Hello;

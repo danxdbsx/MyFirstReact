@@ -18,7 +18,7 @@ return (
         <div>
             <Button />
         </div>
-        <Greet name = {"Peter"} heroName = "Spiderman">
+        <Greet name = {Hello()} heroName = "Spiderman">
           <Message></Message>
         </Greet>
         <Greet name = "Tony" heroName = "Iron Man">
