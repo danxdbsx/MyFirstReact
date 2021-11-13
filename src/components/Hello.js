@@ -5,7 +5,7 @@ const Hello = () =>{
 
     // hooks ni react para magamit ni fx yung state concepts
     // param is variable, method, initial value is empty
-    const [helloReturn, setHello] = useState([])
+    const [helloReturn, setHello] = useState(["alaws pang api pri"])
 
     // hook again
     useEffect(() => {
@@ -15,6 +15,11 @@ const Hello = () =>{
                 setHello(response.data);
             }
         ) 
+        .catch(
+            err => {
+                console.log("yo may mali sa code");
+            }
+        )
     })
 
     return helloReturn;
