@@ -5,6 +5,7 @@ import Greet from './components/Greet';
 import Message from './components/Message';
 import Button from './components/Button';
 import Hello from './components/Hello';
+import Employee from './components/Employee';
 
 function App() {
 return (
@@ -18,6 +19,7 @@ return (
         <div>
             <Button />
         </div>
+        <Employee/>
         <Greet name = {Hello()} heroName = "Spiderman">
           <Message></Message>
         </Greet>
