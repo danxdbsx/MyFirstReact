@@ -23,10 +23,10 @@ return (
         <Greet name = {Hello()} heroName = "Spiderman">
           <Message></Message>
         </Greet>
-        <Greet name = "Tony" heroName = "Iron Man">
+        <Greet name = "Stephen" heroName = "Doctor Strange">
             <Button/>
         </Greet>
-        <Greet name = "Thor" heroName = "Thor"/>
+        <Greet name = "Wanda" heroName = "Scarlet Witch"/>
         <a
           className="App-link"
           href="https://reactjs.org"
