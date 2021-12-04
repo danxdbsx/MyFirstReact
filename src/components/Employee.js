@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import EmployeeService from "../services/EmployeeService";
+import { Link } from "react-router-dom";
+
 
 const Employee = () =>{
 
@@ -22,26 +24,37 @@ const Employee = () =>{
 
     return (
         <div>
+            <br></br>
             <h3>List of Employees</h3>
-            <div>
-                <table border="1">
-                    <tr>
+            <br></br>
+            <div className="container">
+                <table className="table table-hover table-dark align-middle">
+                    <thead>
+                    <tr className="table-info">
+                        <td> ID </td>
                         <td> Name </td>
                         <td> Department </td>
                         <td> Location </td>
+                        <td> Actions </td>
+                        
                     </tr>
+                    </thead>
+                    <tbody>
                     {
                         employeeReturn.map(
                             employeeMap => (
-                                <tr key={employeeMap.employee_Id}>
+                                <tr key={employeeMap.employeeId}>
+                                    <td>{employeeMap.employeeId}</td>
                                     <td>{employeeMap.name}</td>
                                     <td>{employeeMap.department}</td>
                                     <td>{employeeMap.location}</td>
+                                    <td> <Link className="btn btn-primary" to={`edit/${employeeMap.employeeId}`}>Update</Link> </td>
                                 </tr>
 
                             )
                         )
                     }
+                    </tbody>
 
                 </table>
             </div>
