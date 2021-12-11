@@ -3,9 +3,12 @@ import EmployeeService from "../services/EmployeeService";
 import { Link } from "react-router-dom";
 
 
+
 const Employee = () =>{
 
     const [employeeReturn, setEmployee] = useState([])
+
+    
 
     useEffect(() => {
         refreshEmployeeTable();
@@ -70,7 +73,9 @@ const Employee = () =>{
                                     <td> 
                                         <div class="d-grid gap-2 d-md-flex ">
                                             <Link className="btn btn-primary" to={`edit/${employeeMap.employeeId}`}>Update</Link> 
-                                            <button className="btn btn-danger" onClick={(e) => deleteEmployee(employeeMap.employeeId)}>Delete</button>
+                                            <button className="btn btn-danger" 
+                                                    onClick={(e) => deleteEmployee(employeeMap.employeeId)}>
+                                                        Delete</button>
                                         </div>
                                     
                                     </td>
