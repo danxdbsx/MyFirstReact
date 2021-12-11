@@ -10,13 +10,18 @@ const postEmployee = (data) =>{
 }
 
 // FOR UPDATE
-const getEmployee = (id) =>{
+const getEmployee = (employeeId) =>{
     
-    return httpCommon.get(`/employee/employees/${id}`);  
+    return httpCommon.get(`/employee/employees/${employeeId}`);  
 }
 
 const putEmployee = (data) =>{
     return httpCommon.post('/employee/employees', data)
 }
 
-export default {getEmployees, postEmployee, getEmployee, putEmployee};
+// FOR DELETE
+const deleteEmployee = (employeeId) =>{
+    return httpCommon.delete(`/employee/employees/${employeeId}`)
+}
+
+export default {getEmployees, postEmployee, getEmployee, putEmployee, deleteEmployee};

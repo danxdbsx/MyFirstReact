@@ -8,6 +8,10 @@ const Employee = () =>{
     const [employeeReturn, setEmployee] = useState([])
 
     useEffect(() => {
+        refreshEmployeeTable();
+    })
+
+    const refreshEmployeeTable = () =>{
         EmployeeService.getEmployees()
         .then(
             response => {
@@ -20,7 +24,22 @@ const Employee = () =>{
                 console.log("yo may mali sa code");
             }
         )
-    })
+    }
+
+    const deleteEmployee = (employeeId) =>{
+        EmployeeService.deleteEmployee(employeeId)
+        .then(
+            response =>{
+                console.log("rekt yung entry")
+                refreshEmployeeTable();
+            }
+        )
+        .catch(
+            error =>{
+                console.error("rekt yung code mo line 39 Employee.js")
+            }
+        )
+    }
 
     return (
         <div>
@@ -48,7 +67,13 @@ const Employee = () =>{
                                     <td>{employeeMap.name}</td>
                                     <td>{employeeMap.department}</td>
                                     <td>{employeeMap.location}</td>
-                                    <td> <Link className="btn btn-primary" to={`edit/${employeeMap.employeeId}`}>Update</Link> </td>
+                                    <td> 
+                                        <div class="d-grid gap-2 d-md-flex ">
+                                            <Link className="btn btn-primary" to={`edit/${employeeMap.employeeId}`}>Update</Link> 
+                                            <button className="btn btn-danger" onClick={(e) => deleteEmployee(employeeMap.employeeId)}>Delete</button>
+                                        </div>
+                                    
+                                    </td>
                                 </tr>
 
                             )

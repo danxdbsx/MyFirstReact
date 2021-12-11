@@ -1,9 +1,16 @@
 const NavBar = () => {
     return(
-        <div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+        <div className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+                <nav>
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">Web Programming</a>
+                    </div>
+                </nav>
+
+                <nav>
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="/">Web Programming yO</a>
                             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div className="navbar-nav">
                                     <a className="nav-link active" href="/">Home</a>
@@ -15,6 +22,7 @@ const NavBar = () => {
                     </div>
                 </nav>
         </div>
+        
         
     )
 

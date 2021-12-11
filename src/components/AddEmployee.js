@@ -9,15 +9,38 @@ const AddEmployee = () =>{
     const [department, setDepartment] = useState("");
     const [location, setLocation] = useState("");
     const navigate = useNavigate();
-    const {id} = useParams();
+    const {employeeId} = useParams();
+
+    useEffect(
+        
+        () =>{
+            if(employeeId) {
+                EmployeeService.getEmployee(employeeId) // returns a promise
+                .then(
+                    response => {
+                        setName(response.data.name);
+                        setDepartment(response.data.department);
+                        setLocation(response.data.location);
+                    }
+                )
+                .catch(
+                    error =>{
+                        console.log("Ayaya check mo AddEmployee.js")
+                    }
+
+                )
+            }
+        },[]
+    )
     
     //save method
     const saveEmployee = (e) =>{
         e.preventDefault();
-        const employee = {id, name, department, location};
-
-        if (id) {
+        
+        const employee = {employeeId, name, department, location};
+        if (employeeId) {
             //UPDATE
+             
             EmployeeService.putEmployee(employee) //this becomes a promise
             .then(response =>{
                 
