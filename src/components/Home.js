@@ -14,7 +14,7 @@ return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. gusto ko na mag-genshin.
+          Exempted daw sa exam pag napublish lezgo!!!
         </p>
         <p>{Hello()}</p>
         <div>
@@ -25,14 +25,6 @@ return (
         </Greet>
         <Greet name = "Stephen" heroName = "Doctor Strange"></Greet>
         <Greet name = "Wanda" heroName = "Scarlet Witch"/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );

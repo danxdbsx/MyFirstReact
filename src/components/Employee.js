@@ -30,18 +30,27 @@ const Employee = () =>{
     }
 
     const deleteEmployee = (employeeId) =>{
-        EmployeeService.deleteEmployee(employeeId)
-        .then(
-            response =>{
-                console.log("rekt yung entry")
-                refreshEmployeeTable();
-            }
-        )
-        .catch(
-            error =>{
-                console.error("rekt yung code mo line 39 Employee.js")
-            }
-        )
+
+        if (window.confirm("This employee will be deleted. G?")) {
+            EmployeeService.deleteEmployee(employeeId)
+            .then(
+                response =>{
+                    console.log("rekt yung entry")
+                    refreshEmployeeTable();
+    
+                }
+            )
+            .catch(
+                error =>{
+                    console.error("rekt yung code mo line 39 Employee.js")
+                }
+            )
+        }
+        else {
+            alert("di na deleted");
+        }
+        
+        
     }
 
     return (
@@ -49,11 +58,12 @@ const Employee = () =>{
             <br></br>
             <h3>List of Employees</h3>
             <br></br>
+
+            
             <div className="container">
                 <table className="table table-hover table-dark align-middle">
                     <thead>
                     <tr className="table-info">
-                        <td> ID </td>
                         <td> Name </td>
                         <td> Department </td>
                         <td> Location </td>
@@ -66,7 +76,6 @@ const Employee = () =>{
                         employeeReturn.map(
                             employeeMap => (
                                 <tr key={employeeMap.employeeId}>
-                                    <td>{employeeMap.employeeId}</td>
                                     <td>{employeeMap.name}</td>
                                     <td>{employeeMap.department}</td>
                                     <td>{employeeMap.location}</td>
