@@ -56,7 +56,7 @@ const AddEmployee = () =>{
                                    
             })
             .catch(error => {
-                console.log("may error lods")
+                console.log("may error lodssss")
             })
         }
         else {
@@ -70,6 +70,7 @@ const AddEmployee = () =>{
                 )
                 .catch(error => {
                     console.log("may error lods")
+                    alert("form incomplete badi")
                 })
         }
     
