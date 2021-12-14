@@ -21,9 +21,6 @@ const AddEmployee = () =>{
                         setName(response.data.name);
                         setDepartment(response.data.department);
                         setLocation(response.data.location);
-
-                        
-                        alert("Form will be populated badi edit mo na");
                     }
                 )
                 .catch(
