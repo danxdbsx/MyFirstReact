@@ -11,7 +11,7 @@ const AddEmployee = () =>{
     const navigate = useNavigate();
     const {employeeId} = useParams();
 
-    // supposedly for populating the fields
+    // supposedly for populating the fields, kulang lang pala ng value={name}..etc yung mga table data lels
     useEffect(
         () => {
             if(employeeId) {
@@ -21,11 +21,9 @@ const AddEmployee = () =>{
                         setName(response.data.name);
                         setDepartment(response.data.department);
                         setLocation(response.data.location);
-                        console.log(response.data.name)
-                        console.log(response.data.department)
-                        console.log(response.data.location)
+
                         
-                        // alert('success test');
+                        alert("Form will be populated badi edit mo na");
                     }
                 )
                 .catch(
@@ -43,7 +41,9 @@ const AddEmployee = () =>{
     const saveEmployee = (e) =>{
         e.preventDefault();
         
+
         const employee = {employeeId, name, department, location};
+
         if (employeeId) {
             //UPDATE
             
@@ -81,14 +81,15 @@ const AddEmployee = () =>{
             <h3>Add New Employee</h3>
             <br></br>
 
-            <form class="row g-3">
+            <form class="row g-3" noValidate>
                 <div class="col-md-4">
                     <label for="name" class="form-label">Name</label>
                     <input 
                         type="text" 
                         class="form-control" 
                         id="name" 
-                        placeholder="Input employee name here"
+                        value={name}
+                        placeholder="Input employee location here"
                         onChange={
                             (e) => setName(e.target.value)
                         }
@@ -100,7 +101,8 @@ const AddEmployee = () =>{
                         type="text" 
                         class="form-control" 
                         id="department" 
-                        placeholder="Input employee department here"
+                        value={department}
+                        placeholder="Input employee location here"
                         onChange={
                             (e) => setDepartment(e.target.value)
                         }
@@ -112,6 +114,7 @@ const AddEmployee = () =>{
                         type="text" 
                         class="form-control" 
                         id="location"
+                        value={location}
                         placeholder="Input employee location here"
                         onChange={
                             (e) => setLocation(e.target.value)
@@ -122,10 +125,9 @@ const AddEmployee = () =>{
                 <button 
                     type="submit" 
                     className="btn btn-primary" 
-                    onClick={(e) =>saveEmployee(e)}>Save</button>
+                    onClick={(e) =>saveEmployee(e)
+                    }>Save</button>
             </form>
-
-
 
         </div>
     )

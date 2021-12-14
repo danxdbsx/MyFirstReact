@@ -14,7 +14,7 @@ return (
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Exempted daw sa exam pag napublish lezgo!!!
+          Exempted daw sa exam pag napublish lezgo!!! hopeless na kailangan ng credit card lmaoooo
         </p>
         <p>{Hello()}</p>
         <div>
